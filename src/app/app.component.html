@@ -1,0 +1,21 @@
+<div class="container">  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">A simple demo Angular app
+    <small class="text-muted">
+      
+    </small>
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>  
+<div class="jumbotron">
+  <h1 id="pageTitle" class="display-4">Hello, Testers!</h1>
+</div><router-outlet></router-outlet></div>
+<div class="menu-container"></div>
+<div>username:<input type="text" id="username" name="username" [(ngModel)]="username"></div>
+<div>password:<input type="text" id="password" name="password" [(ngModel)]="password"></div> 
+<div> <button id="loginButton" class="primary-button" (click)="loginUser()">Login</button> </div>
+<div> <button id="logoutButton" class="primary-button" (click)="logoutUser()">Logout</button> </div>
