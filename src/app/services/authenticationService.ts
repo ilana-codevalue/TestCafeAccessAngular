@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 
 export class AuthenticationService {
 
-  public state: string;
+  public state: string = "loggedOut";
   constructor() {
   }
 

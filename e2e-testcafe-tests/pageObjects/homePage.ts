@@ -23,7 +23,7 @@ export class HomePage {
     }
 
     async login(username: string, password: string) {
-        console.log(`login user ${username} from UI`)
+        console.log(`login user ${username} from UI`);
         await t
             .typeText(this.lct_username, username)
             .typeText(this.lct_password, password)
@@ -31,7 +31,7 @@ export class HomePage {
     }
 
     async logout(username: string) {
-        console.log(`logout user: ${username}`)
+        console.log(`logout user: ${username}`);
         t.click(this.lct_logoutButton);
     }
 }

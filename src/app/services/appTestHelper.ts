@@ -22,7 +22,7 @@ export class AppTestHelperService implements OnInit, OnDestroy {
   public ngOnInit(): void {
     window["appComponentRef"] = {
       component: this, zone: this.ngZone,
-      returnAuthenticationService: () => this.authenticationService,
+      returnAuthenticationService: () => this.authenticationService
       // returnOtherService: () => this.otherService, 
     };
   }

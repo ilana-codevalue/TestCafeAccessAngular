@@ -10,6 +10,7 @@ import { AppTestHelperService } from './services/appTestHelper';
 export class AppComponent implements OnInit, OnDestroy {
   username: string = '';
   password: string = '';
+  loginState : string = this.authenticationService.state;
  
   constructor(private authenticationService: AuthenticationService, 
     private appTestHelperService: AppTestHelperService) {
@@ -24,11 +25,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public logoutUser() : void {
     this.authenticationService.logout(this.username);
+    this.loginState = this.authenticationService.state;
     console.log(`app clicked logout button`)
   }
 
-  public loginUser() : void {
-    this.authenticationService.login(this.username, this.password);
+  public async loginUser() : Promise<void> {
+    await this.authenticationService.login(this.username, this.password);
+    this.loginState = this.authenticationService.state;
     console.log(`app clicked login button`)
   }
 }

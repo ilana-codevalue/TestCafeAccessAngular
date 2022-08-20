@@ -14,7 +14,7 @@ export class BackendApiAccess {
 
         return await func(userame)
         .then(() => {
-            console.log(`calling logout from angular service`);
+            console.log(`calling logout from angular service..`);
             return returnPromise;
           })
           .catch((err) => {

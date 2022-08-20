@@ -9,7 +9,7 @@ fixture`Test structure`
 
 test('Login test', async t => {
     await homePage.login(USERNAME, PASSWORS);
-    await t.expect(await homePage.lct_loginState.textContent).eql("loggedIn");
+    await t.expect(await homePage.lct_loginState.textContent).eql("State: loggedIn");
 })
 
 .before(async () => {
